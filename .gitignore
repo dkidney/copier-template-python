@@ -6,6 +6,7 @@ __pycache__/
 .env
 .venv/
 .pytest_cache/
+.ruff_cache/
 
 .ipynb_checkpoints/
 
