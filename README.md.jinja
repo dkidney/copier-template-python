@@ -4,7 +4,14 @@
 
 ## copier template
 
-This project was made from a copier template.
+This project was made from a copier template - probably using one of these methods:
+
+```sh
+repo=https://github.com/dkidney/copier-template-python.git
+copier copy --vcs-ref develop ${repo} {{ project_name }}
+copier copy --vcs-ref v0.1.0 ${repo} {{ project_name }}
+copier copy --vcs-ref a1b2c3d4 ${repo} {{ project_name }}
+```
 
 The project tree should look something like this:
 
@@ -16,6 +23,8 @@ The project tree should look something like this:
 ├── src
 │   └── my_new_project
 │       └── __init__.py
+├── tests
+│   └── test_import.py
 ```
 
 You can set up a venv and install dependencies using the Makefile
