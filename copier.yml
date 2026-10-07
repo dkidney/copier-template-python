@@ -1,0 +1,23 @@
+_min_copier_version: "9.0.0"
+
+project_name:
+  type: str
+  help: What is the project name?
+  default: "my-new-project"
+
+package_name: "{{ project_name | lower | regex_replace('[^a-z0-9]+', '_') | trim('_') }}"
+
+description:
+  type: str
+  help: Short project description
+  default: "Add your description here"
+
+author_name:
+  type: str
+  help: Your name
+  default: "Add your name here"
+
+python_version:
+  type: str
+  help: Python version
+  default: "3.12.13"
