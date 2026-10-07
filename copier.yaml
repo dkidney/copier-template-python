@@ -21,3 +21,9 @@ python_version:
   type: str
   help: Python version
   default: "3.12.13"
+
+include_data:
+  type: bool
+  help: Include a data directory?
+  default: false
+

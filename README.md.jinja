@@ -10,7 +10,7 @@ This project was made from a copier template - probably using one of these metho
 # from a remote git repo
 repo=https://github.com/dkidney/copier-template-python.git
 copier copy --vcs-ref develop ${repo} {{ project_name }}
-copier copy --vcs-ref v0.1.0 ${repo} {{ project_name }}
+copier copy --vcs-ref v0.2.0 ${repo} {{ project_name }}
 copier copy --vcs-ref a1b2c3d4 ${repo} {{ project_name }}
 
 # from a local template
@@ -46,9 +46,17 @@ make venv # sets up a new .venv
 make sync # uv sync
 ```
 
-And you can run tests and checks using 
+And you can run tests and checks 
+
 ```sh
 make test # uv run pytest
 make check # uv run ruff check
 make format # uv run ruff format --check
+```
+
+You can also run pre-commit on your staged files
+
+```sh
+uv run pre-commit install  # installs the pre-commit hook
+uv run pre-commit run --all-files  # checks all staged files
 ```

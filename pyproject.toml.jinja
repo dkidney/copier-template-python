@@ -6,13 +6,18 @@ authors = [
     { name = "{{ author_name }}" }
 ]
 description = "{{ description }}"
-dependencies = []
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.3",
+    "pandas>=3.0.6",
+]
 
 [dependency-groups]
 dev = [
-    "ipykernel",
-    "pytest",
-    "ruff",
+    "ipykernel>=7.4.0",
+    "pre-commit>=4.6.2",
+    "pytest>=9.1.1",
+    "ruff>=0.16.10",
 ]
 
 [build-system]
