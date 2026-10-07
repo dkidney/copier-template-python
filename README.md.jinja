@@ -1,0 +1,34 @@
+# {{ project_name }}
+
+{{ description }}
+
+## copier template
+
+This project was made from a copier template.
+
+The project tree should look something like this:
+
+```
+.
+├── Makefile
+├── pyproject.toml
+├── README.md
+├── src
+│   └── my_new_project
+│       └── __init__.py
+```
+
+You can set up a venv and install dependencies using the Makefile
+
+```sh
+make clean # removes and existing .venv files
+make venv # sets up a new .venv
+make sync # uv sync
+```
+
+And you can run tests and checks using 
+```sh
+make test # uv run pytest
+make check # uv run ruff check
+make format # uv run ruff format --check
+```
