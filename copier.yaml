@@ -2,14 +2,17 @@ _min_copier_version: "9.0.0"
 
 project_name:
   type: str
-  help: What is the project name?
+  help: Project name
   default: "my-new-project"
 
-package_name: "{{ project_name | lower | regex_replace('[^a-z0-9]+', '_') | trim('_') }}"
+package_name: 
+  type: str
+  help: Package name
+  default: "{{ project_name | lower | regex_replace('[^a-z0-9]+', '_') | trim('_') }}"
 
 description:
   type: str
-  help: Short project description
+  help: Project description
   default: "Add your description here"
 
 author_name:
@@ -24,6 +27,5 @@ python_version:
 
 include_data:
   type: bool
-  help: Include a data directory?
+  help: Include a data folder
   default: false
-
