@@ -4,10 +4,16 @@ project_name:
   type: str
   help: Project name
 
-project_slug: "{{ project_name | lower | regex_replace('[^a-z0-9]+', '-') | trim('-') }}"
+project_slug:
+  type: str
+  when: false
+  default: "{{ project_name | lower | regex_replace('[^a-z0-9]+', '-') | trim('-') }}"
 
-package_name: "{{ project_slug | replace('-', '_') }}"
-
+package_name:
+  type: str
+  when: false
+  default: "{{ project_slug | replace('-', '_') }}"
+  
 description:
   type: str
   help: Project description

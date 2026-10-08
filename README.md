@@ -20,7 +20,7 @@ To generate a project from this template via the command line using one of the f
 
 ```sh
 src=https://github.com/dkidney/copier-template-python.git
-dst=project/folder
+dst=project/parent/folder
 
 # from a branch
 copier copy --vcs-ref main ${src} ${dst}
@@ -40,6 +40,7 @@ copier copy --vcs-ref HEAD ~/github/copier-template-python ${dst}
 After you have submitted the `copier copy` command you will be present with a series of input prompts (all of which have defaults)
 
 * `Project name`
+* `Package name` - by default this will convert your project name into lower_snake_case
 * `Package name` - by default this will convert your project name into lower_snake_case
 * `Project description`
 * `Your name`
