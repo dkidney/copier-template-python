@@ -3,22 +3,20 @@ _min_copier_version: "9.0.0"
 project_name:
   type: str
   help: Project name
-  default: "my-new-project"
 
-package_name: 
-  type: str
-  help: Package name
-  default: "{{ project_name | lower | regex_replace('[^a-z0-9]+', '_') | trim('_') }}"
+project_slug: "{{ project_name | lower | regex_replace('[^a-z0-9]+', '-') | trim('-') }}"
+
+package_name: "{{ project_slug | replace('-', '_') }}"
 
 description:
   type: str
   help: Project description
-  default: "Add your description here"
+  default: "DESCRIPTION"
 
 author_name:
   type: str
   help: Your name
-  default: "Add your name here"
+  default: "AUTHOR"
 
 python_version:
   type: str
