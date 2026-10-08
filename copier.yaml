@@ -33,3 +33,11 @@ include_data:
   type: bool
   help: Include a data folder
   default: false
+
+_exclude:
+  - "copier.yaml"
+  - "copier.yml"
+  - ".git"
+  - ".DS_Store"
+  - "/README.md"
+  - "/.gitignore"
