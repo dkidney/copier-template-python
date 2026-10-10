@@ -17,12 +17,12 @@ package_name:
 description:
   type: str
   help: Project description
-  default: "DESCRIPTION"
+  default: "DESC"
 
 author_name:
   type: str
   help: Your name
-  default: "AUTHOR"
+  default: "AUTH"
 
 python_version:
   type: str

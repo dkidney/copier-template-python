@@ -1,5 +1,5 @@
 [project]
-name = "{{ project_name }}"
+name = "{{ project_slug }}"
 dynamic = ["version"]
 requires-python = ">={{ python_version }}"
 authors = [
@@ -29,3 +29,31 @@ packages = ["src/{{ package_name }}"]
 
 [tool.hatch.version]
 path = "src/{{ package_name }}/__init__.py"
+
+[tool.ruff]
+line-length = 100
+target-version = "py{{ python_version.split('.')[0] }}{{ python_version.split('.')[1] }}"
+exclude = [
+    ".venv",
+    "dist",
+    "build",
+    "__pycache__",
+    ".git",
+    "data",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "I",   # import sorting
+    "B",   # bugbear
+    "UP",  # pyupgrade
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["{{ package_name }}"]
