@@ -15,6 +15,7 @@ dependencies = [
 [dependency-groups]
 dev = [
     "ipykernel>=7.4.0",
+    "mypy",
     "pre-commit>=4.6.2",
     "pytest>=9.1.1",
     "ruff>=0.16.10",
@@ -48,11 +49,12 @@ indent-style = "space"
 
 [tool.ruff.lint]
 select = [
-    "E",   # pycodestyle errors
-    "F",   # pyflakes
-    "I",   # import sorting
-    "B",   # bugbear
-    "UP",  # pyupgrade
+    "E",   # pycodestyle: common style errors and PEP 8 violations
+    "F",   # Pyflakes: undefined names, unused imports, and other likely errors
+    "I",   # isort: import sorting and grouping
+    "B",   # flake8-bugbear: likely bugs and questionable coding patterns
+    "UP",  # pyupgrade: outdated syntax and modernisation suggestions
+    "SIM", # flake8-simplify: unnecessarily complex or redundant code
 ]
 
 [tool.ruff.lint.isort]

@@ -13,7 +13,7 @@ package_name:
   type: str
   when: false
   default: "{{ project_slug | replace('-', '_') }}"
-  
+
 description:
   type: str
   help: Project description
@@ -34,6 +34,11 @@ include_data:
   help: Include a data folder
   default: false
 
+copyright_year:
+  type: str
+  when: false
+  default: "2026"
+
 _exclude:
   - "copier.yaml"
   - "copier.yml"
@@ -41,3 +46,5 @@ _exclude:
   - ".DS_Store"
   - "/README.md"
   - "/.gitignore"
+  - "/.vscode"
+  - "/.github"

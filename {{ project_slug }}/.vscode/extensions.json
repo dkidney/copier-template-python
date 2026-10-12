@@ -5,9 +5,11 @@
     "ms-toolsai.jupyter",
     "charliermarsh.ruff",
     "tamasfe.even-better-toml",
-    "mechatroner.rainbow-csv",
+    "aaron-bond.better-comments",
     "github.vscode-github-actions",
+    "mechatroner.rainbow-csv",
     "redhat.vscode-yaml",
+    "njpwerner.autodocstring",
     // "ms-toolsai.datawrangler",
   ]
 }

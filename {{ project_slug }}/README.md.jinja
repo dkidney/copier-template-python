@@ -1,7 +1,117 @@
-[![Copier](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-teal.json)](https://github.com/copier-org/copier)
-
 # {{ project_name }}
 
-{{ description }}
+Short description of what the package does and the problem it solves.
 
+![License](https://img.shields.io/github/license/username/repository)
+![CI](https://github.com/dkidney/{{ project_name }}/actions/workflows/ci.yml/badge.svg)
+[![Copier](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-teal.json)](https://github.com/copier-org/copier)
 
+## Features
+
+## Installation
+
+### Requirements
+
+- Python {{ python_version.split('.')[0] }}.{{ python_version.split('.')[1] }}
+- uv
+
+```sh
+brew install uv
+```
+
+### Install from source
+
+Clone the repository and enter the project directory:
+
+```sh
+git clone https://github.com/dkidney/{{ project_name }}.git
+cd {{ project_name }}
+```
+
+Install the project and its development dependencies:
+
+```sh
+uv sync --dev
+```
+
+Install the Git hooks:
+
+```sh
+uv run pre-commit install
+```
+
+Pre-commit will now run the configured checks automatically when you commit changes.
+
+#### Running checks manually
+
+Run all pre-commit hooks against the entire repository:
+
+```sh
+uv run pre-commit run --all-files
+```
+
+Run the test suite:
+
+```sh
+uv run pytest
+```
+
+#### Updating dependencies
+
+If you change dependencies in pyproject.toml, update the lockfile:
+
+uv lock
+
+Commit the updated uv.lock file along with your changes.
+
+If a pre-commit hook modifies a file, review the changes, stage them, and run the commit again.
+
+## Quick Start
+
+A minimal, working example showing how to import and use the package.
+
+```python
+from {{ package_name }} import helloworld
+
+print(helloworld())
+```
+
+## Usage
+
+More detailed examples covering the package's main use cases.
+
+### Basic Usage
+
+### Advanced Usage
+
+### Configuration
+
+## API Reference
+
+Description of the main public classes, functions, and modules, or a link to generated API documentation.
+
+## Examples
+
+Practical examples, scripts, notebooks, or links to example files.
+
+## Development
+
+Instructions for setting up a local development environment.
+
+### Set Up the Environment
+
+### Run Tests
+
+### Code Quality and Formatting
+
+## Contributing
+
+Guidelines for reporting issues, submitting pull requests, and contributing code.
+
+## License
+
+State the license and link to the relevant `LICENSE` file.
+
+## Acknowledgements
+
+Credit to relevant projects, contributors, or funding sources, if applicable.
